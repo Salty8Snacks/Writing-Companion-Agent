@@ -95,39 +95,42 @@ async def test_session_opens_with_bundled_skill(
         await session.cancel()
 
 
-def _reload_main(monkeypatch: pytest.MonkeyPatch, **env: str):
-    import importlib
-
-    import main
-
-    for key, value in env.items():
-        monkeypatch.setenv(key, value)
-    return importlib.reload(main)
-
-
-def test_default_provider_is_mistral(monkeypatch: pytest.MonkeyPatch) -> None:
-    mod = _reload_main(
-        monkeypatch,
-        WRITING_COMPANION_SANDBOX="bashkit",
-        WRITING_COMPANION_MODEL="mistral-large-4",
-    )
-    assert mod.agent.model == "mistral-large-4"
-
-
-def test_ollama_provider_needs_no_key(monkeypatch: pytest.MonkeyPatch) -> None:
-    mod = _reload_main(
-        monkeypatch,
-        WRITING_COMPANION_SANDBOX="bashkit",
-        WRITING_COMPANION_PROVIDER="ollama",
-    )
-    assert mod.agent.model == "mistral-small3.2"
-
-    modified = agents.Agent(
-        model=mod.agent.model,
+def _build_with(be, completion, model: str) -> agents.Agent:
+    return agents.Agent(
+        model=model,
         name="writing-companion-test",
-        completion=mod._completion(),
+        completion=completion,
         environment=agents.BashkitSandbox(),
         skills=[agents.LocalSkillBundle.from_directory(SKILL_DIR)],
         instructions=INSTRUCTIONS,
     )
-    assert modified.model == "mistral-small3.2"
+
+
+def test_default_provider_is_mistral(monkeypatch: pytest.MonkeyPatch) -> None:
+    import main
+
+    monkeypatch.delenv("WRITING_COMPANION_PROVIDER", raising=False)
+    assert main._completion() is None
+    assert main.agent.model == "mistral-large-4"
+
+
+def test_ollama_provider_needs_no_key(monkeypatch: pytest.MonkeyPatch) -> None:
+    import main
+
+    monkeypatch.setenv("WRITING_COMPANION_PROVIDER", "ollama")
+    config = main._completion()
+    assert config.model == "mistral-small3.2"
+    assert _build_with(main, config, config.model).model == "mistral-small3.2"
+
+
+def test_gateway_provider_reads_named_env_var(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    import main
+
+    monkeypatch.setenv("WRITING_COMPANION_PROVIDER", "gateway")
+    monkeypatch.setenv("GEMINI_API_KEY", "dummy-key-for-construction-only")
+    monkeypatch.setenv("WRITING_COMPANION_GATEWAY_MODEL", "gemini-2.0-flash")
+    config = main._completion()
+    assert config.model == "gemini-2.0-flash"
+    assert _build_with(main, config, config.model).model == "gemini-2.0-flash"

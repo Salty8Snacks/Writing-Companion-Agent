@@ -6,10 +6,18 @@ A supportive, precise college-level writing coach. Exports `agent` for the
 
 import os
 from pathlib import Path
+from typing import Literal
 
 from mistralai import agents
+from mistralai.vibe.harness.runtime.completion import (
+    CompletionConfigBase,
+    CompletionProvider,
+)
 from mistralai.vibe.harness.runtime.completion.providers.ollama import (
     OllamaCompletionConfig,
+)
+from mistralai.vibe.harness.runtime.completion.providers.openai import (
+    OpenAICompletionProvider,
 )
 
 SKILLS = Path(__file__).with_name("skills")
@@ -116,15 +124,47 @@ def _environment():
 MODEL = os.environ.get("WRITING_COMPANION_MODEL", "mistral-large-4")
 
 
+class GatewayConfig(CompletionConfigBase):
+    """Any OpenAI-compatible gateway (Gemini, OpenRouter, Groq, ...)."""
+
+    type: Literal["writing_companion_gateway"] = "writing_companion_gateway"
+    model: str = "gemini-2.0-flash"
+    base_url: str = "https://generativelanguage.googleapis.com/v1beta/openai"
+    api_key_env_var: str = "GEMINI_API_KEY"
+
+    def build_provider(self) -> CompletionProvider:
+        return OpenAICompletionProvider(
+            api_key=os.environ[self.api_key_env_var],
+            model=self.model,
+            base_url=self.base_url,
+        )
+
+
 def _completion():
-    """Model routing: Mistral by default; a local Ollama server with
-    WRITING_COMPANION_PROVIDER=ollama, so no Mistral API key is needed.
-    WRITING_COMPANION_OLLAMA_BASE_URL overrides the server address."""
-    if os.environ.get("WRITING_COMPANION_PROVIDER", "mistral") == "ollama":
+    """Model routing. Default: Mistral.
+    WRITING_COMPANION_PROVIDER=ollama — a local Ollama server (no key).
+    WRITING_COMPANION_PROVIDER=gateway — any OpenAI-compatible endpoint
+    (Gemini, OpenRouter, Groq, ...): set WRITING_COMPANION_GATEWAY_BASE_URL,
+    WRITING_COMPANION_GATEWAY_MODEL, and the key in the environment variable
+    named by WRITING_COMPANION_GATEWAY_API_KEY_ENV_VAR."""
+    provider = os.environ.get("WRITING_COMPANION_PROVIDER", "mistral")
+    if provider == "ollama":
         return OllamaCompletionConfig(
             model=os.environ.get("WRITING_COMPANION_OLLAMA_MODEL", "mistral-small3.2"),
             base_url=os.environ.get(
                 "WRITING_COMPANION_OLLAMA_BASE_URL", "http://localhost:11434"
+            ),
+        )
+    if provider == "gateway":
+        return GatewayConfig(
+            model=os.environ.get("WRITING_COMPANION_GATEWAY_MODEL", "gemini-2.0-flash"),
+            base_url=os.environ.get(
+                "WRITING_COMPANION_GATEWAY_BASE_URL",
+                "https://generativelanguage.googleapis.com/v1beta/openai",
+            ),
+            api_key_env_var=os.environ.get(
+                "WRITING_COMPANION_GATEWAY_API_KEY_ENV_VAR",
+                "GEMINI_API_KEY",
             ),
         )
     return None

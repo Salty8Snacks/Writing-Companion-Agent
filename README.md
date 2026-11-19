@@ -44,6 +44,29 @@ The default is Mistral (`mistral-large-4` via `WRITING_COMPANION_MODEL`). A loca
 slower and weaker than the API models, so expect less polished coaching and test the
 live-run checklist against whichever backend you ship.
 
+## Using another provider (Gemini, OpenRouter, Groq, ...)
+
+Set `WRITING_COMPANION_PROVIDER=gateway` to route model calls through any
+OpenAI-compatible endpoint. Example with Gemini's free tier (key from
+[Google AI Studio](https://aistudio.google.com/apikey)):
+
+```bash
+export GEMINI_API_KEY=<your-google-ai-studio-key>
+WRITING_COMPANION_SANDBOX=bashkit WRITING_COMPANION_PROVIDER=gateway \
+  uv run agents chat
+```
+
+- `WRITING_COMPANION_GATEWAY_MODEL` — model name (default `gemini-2.0-flash`)
+- `WRITING_COMPANION_GATEWAY_BASE_URL` — OpenAI-compatible endpoint
+  (default is Gemini's: `https://generativelanguage.googleapis.com/v1beta/openai`;
+  for OpenRouter use `https://openrouter.ai/api/v1`, for Groq
+  `https://api.groq.com/openai/v1`)
+- `WRITING_COMPANION_GATEWAY_API_KEY_ENV_VAR` — name of the environment
+  variable holding the provider key (default `GEMINI_API_KEY`)
+
+Free-tier rate limits are per provider; check the provider's current terms
+before using it for anything beyond a pilot.
+
 ## Run locally
 
 ```bash
