@@ -74,6 +74,26 @@ echo 'MISTRAL_API_KEY=<your-key>' > .env
 uv run --env-file .env agents chat
 ```
 
+### Windows note: local skills crash in the current SDK
+
+`mistralai-agents` 1.1.2/1.1.3 (latest as of this writing) validates local
+skill paths with `PurePath`, whose Windows flavor rejects `"/SKILL.md"` (no
+drive letter), so on Windows any local skill fails with
+`SkillMaterializationError: Invalid skill metadata`. Until an SDK release
+fixes it, run the bundled patch after every `uv sync`:
+
+```powershell
+uv sync
+Set-Content -Path .env -Value 'GEMINI_API_KEY=paste-your-key-here'
+uv run python scripts/fix-windows-skills.py
+$env:WRITING_COMPANION_SANDBOX = "bashkit"
+$env:WRITING_COMPANION_PROVIDER = "gateway"
+uv run --env-file .env agents chat
+```
+
+The patch is venv-local (`uv sync` recreates it) and is a no-op once the
+SDK ships the fix, at which point delete `scripts/fix-windows-skills.py`.
+
 ## Validate
 
 ```bash
