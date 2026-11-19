@@ -1,0 +1,639 @@
+# Reference Examples by Category (Synthetic Pedagogical Prompts)
+
+**Document Purpose:** Grounding reference containing dataset Columns A, B, and C (ID, Category, Student Prompt) for the Pilot Writing Assistant AI Agent.
+**Dataset Scope:** 74 synthetic examples (SWA-001 through SWA-074) across 12 categories.
+**Companion File:** Match each `SWA-XXX` ID to its ideal coaching response, pedagogical explanation, and source provenance (Columns D, E, and F) inline in `02_writing_coach_reference_guide.txt`.
+**Provenance Notice:** All entries are synthetic pedagogical style references—never records of real students and never weight-level training data.
+
+## Category Index
+
+- **Academic Integrity** (7 examples): SWA-006, SWA-040, SWA-041, SWA-042, SWA-043, SWA-044, SWA-045
+- **Accuracy and Limitations** (6 examples): SWA-007, SWA-046, SWA-047, SWA-048, SWA-049, SWA-050
+- **Assignment Interpretation** (6 examples): SWA-002, SWA-013, SWA-014, SWA-015, SWA-016, SWA-017
+- **Brainstorming** (6 examples): SWA-001, SWA-008, SWA-009, SWA-010, SWA-011, SWA-012
+- **Citation and Paraphrasing** (4 examples): SWA-066, SWA-067, SWA-068, SWA-069
+- **Draft Feedback** (9 examples): SWA-004, SWA-024, SWA-025, SWA-026, SWA-027, SWA-028, SWA-029, SWA-030, SWA-031
+- **Organization** (7 examples): SWA-003, SWA-018, SWA-019, SWA-020, SWA-021, SWA-022, SWA-023
+- **Research and Sources** (5 examples): SWA-051, SWA-052, SWA-053, SWA-054, SWA-055
+- **Revision and Editing** (6 examples): SWA-056, SWA-057, SWA-058, SWA-059, SWA-060, SWA-061
+- **Thesis Development** (4 examples): SWA-062, SWA-063, SWA-064, SWA-065
+- **Writing Anxiety and Planning** (5 examples): SWA-070, SWA-071, SWA-072, SWA-073, SWA-074
+- **Writing Instructions** (9 examples): SWA-005, SWA-032, SWA-033, SWA-034, SWA-035, SWA-036, SWA-037, SWA-038, SWA-039
+
+---
+
+## Academic Integrity
+
+### Example SWA-006: Offer help to develop the thesis outline without
+- **Example ID:** SWA-006
+- **Category:** Academic Integrity
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "Can you write my thesis for me?"
+
+---
+
+### Example SWA-040: Offers learning-focused support without replacing the student's work
+- **Example ID:** SWA-040
+- **Category:** Academic Integrity
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "Can you write my whole essay if I give you the prompt?"
+
+---
+
+### Example SWA-041: Refuses fabricated evidence and offers an appropriate alternative
+- **Example ID:** SWA-041
+- **Category:** Academic Integrity
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "Can you invent a quote from a researcher to support my point?"
+
+---
+
+### Example SWA-042: Maintains academic integrity while offering legitimate revision help
+- **Example ID:** SWA-042
+- **Category:** Academic Integrity
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "Can you rewrite this paragraph so my teacher won't know I used AI?"
+
+---
+
+### Example SWA-043: Clarifies that paraphrasing does not remove citation requirements
+- **Example ID:** SWA-043
+- **Category:** Academic Integrity
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "Do I need to cite an idea if I put it in my own words?"
+
+---
+
+### Example SWA-044: Encourages policy compliance and student ownership
+- **Example ID:** SWA-044
+- **Category:** Academic Integrity
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "Can I use AI feedback on an assignment?"
+
+---
+
+### Example SWA-045: Explains patchwriting risk and provides legitimate alternatives
+- **Example ID:** SWA-045
+- **Category:** Academic Integrity
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "I copied a sentence from a website but changed a few words. Is that enough?"
+
+---
+
+## Accuracy and Limitations
+
+### Example SWA-007: Explains that the AI can't predict the grades
+- **Example ID:** SWA-007
+- **Category:** Accuracy and Limitations
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "What grade will this get?"
+
+---
+
+### Example SWA-046: Communicates limits and recommends verification
+- **Example ID:** SWA-046
+- **Category:** Accuracy and Limitations
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "Can you guarantee that all my citations are correct?"
+
+---
+
+### Example SWA-047: Uses source-evaluation criteria without making unsupported guarantees
+- **Example ID:** SWA-047
+- **Category:** Accuracy and Limitations
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "Is this source definitely reliable?"
+
+---
+
+### Example SWA-048: Acknowledges uncertainty and directs the student to the
+- **Example ID:** SWA-048
+- **Category:** Accuracy and Limitations
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "Can you tell me exactly what my instructor meant by this comment?"
+
+---
+
+### Example SWA-049: Promotes verification instead of blind reliance on AI
+- **Example ID:** SWA-049
+- **Category:** Accuracy and Limitations
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "Can you find sources and tell me what they say without me checking them?"
+
+---
+
+### Example SWA-050: Sets a clear limitation and offers rubric-based support
+- **Example ID:** SWA-050
+- **Category:** Accuracy and Limitations
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "Will this essay get an A if I follow your suggestions?"
+
+---
+
+## Assignment Interpretation
+
+### Example SWA-002: Makes the student read the assignment fully and
+- **Example ID:** SWA-002
+- **Category:** Assignment Interpretation
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "What does my professor want me to do with this assignment?"
+
+---
+
+### Example SWA-013: Clarifies an assignment verb and distinguishes analysis from
+- **Example ID:** SWA-013
+- **Category:** Assignment Interpretation
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "The prompt says 'analyze.' Does that mean summarize?"
+
+---
+
+### Example SWA-014: Explains the task and suggests a comparison-based structure
+- **Example ID:** SWA-014
+- **Category:** Assignment Interpretation
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "My assignment says I need to compare and contrast two articles. What should I do?"
+
+---
+
+### Example SWA-015: Defines a key requirement and directs the student
+- **Example ID:** SWA-015
+- **Category:** Assignment Interpretation
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "I don't understand what 'use scholarly sources' means."
+
+---
+
+### Example SWA-016: Translates rubric language into a practical revision question
+- **Example ID:** SWA-016
+- **Category:** Assignment Interpretation
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "The rubric says my paper needs a clear argument. What does that mean?"
+
+---
+
+### Example SWA-017: Explains synthesis and provides an actionable method
+- **Example ID:** SWA-017
+- **Category:** Assignment Interpretation
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "My professor says 'synthesize your sources.' I'm not sure what that means."
+
+---
+
+## Brainstorming
+
+### Example SWA-001: Gets the student thinking about a more specific
+- **Example ID:** SWA-001
+- **Category:** Brainstorming
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "My professor needs me to write an essay about technology but I don't know what topic to choose."
+
+---
+
+### Example SWA-008: Helps the student narrow a broad topic while
+- **Example ID:** SWA-008
+- **Category:** Brainstorming
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "I need to write about climate change, but my topic feels too broad."
+
+---
+
+### Example SWA-009: Provides a repeatable brainstorming process rather than choosing
+- **Example ID:** SWA-009
+- **Category:** Brainstorming
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "I have to write an argumentative essay. How do I come up with ideas?"
+
+---
+
+### Example SWA-010: Uses questions to help the student generate their
+- **Example ID:** SWA-010
+- **Category:** Brainstorming
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "I can't think of anything to say about my book for class."
+
+---
+
+### Example SWA-011: Offers options and encourages the student to select
+- **Example ID:** SWA-011
+- **Category:** Brainstorming
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "Can you give me some research questions about social media?"
+
+---
+
+### Example SWA-012: Models narrowing from a broad subject to a
+- **Example ID:** SWA-012
+- **Category:** Brainstorming
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "My essay topic is education. What should I write about?"
+
+---
+
+## Citation and Paraphrasing
+
+### Example SWA-066: Explains a responsible paraphrasing workflow
+- **Example ID:** SWA-066
+- **Category:** Citation and Paraphrasing
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "Can you help me paraphrase this source without changing its meaning?"
+
+---
+
+### Example SWA-067: Teaches quotation integration
+- **Example ID:** SWA-067
+- **Category:** Citation and Paraphrasing
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "How do I introduce a direct quotation smoothly?"
+
+---
+
+### Example SWA-068: Explains the convention while acknowledging context
+- **Example ID:** SWA-068
+- **Category:** Citation and Paraphrasing
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "Do I need a citation for common knowledge?"
+
+---
+
+### Example SWA-069: Discourages fabricated citation details
+- **Example ID:** SWA-069
+- **Category:** Citation and Paraphrasing
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "I forgot to record the page number for a quote. What should I do?"
+
+---
+
+## Draft Feedback
+
+### Example SWA-004: Says what mistake was made and shows an
+- **Example ID:** SWA-004
+- **Category:** Draft Feedback
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "Can you proofread this for any mistakes, "Looked at the website.""
+
+---
+
+### Example SWA-024: Identifies vague wording and prompts the student to
+- **Example ID:** SWA-024
+- **Category:** Draft Feedback
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "Is this sentence clear: 'The results were good and things improved a lot'?"
+
+---
+
+### Example SWA-025: Models a more formal tone while emphasizing accurate
+- **Example ID:** SWA-025
+- **Category:** Draft Feedback
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "Can you make this sound more academic: 'A lot of people think phones are bad'?"
+
+---
+
+### Example SWA-026: Explains the grammar issue and demonstrates a repair
+- **Example ID:** SWA-026
+- **Category:** Draft Feedback
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "I wrote, 'Because the experiment ended early.' Is that a complete sentence?"
+
+---
+
+### Example SWA-027: Encourages purposeful revision instead of a rigid rule
+- **Example ID:** SWA-027
+- **Category:** Draft Feedback
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "My paragraph has several long sentences. Should I shorten all of them?"
+
+---
+
+### Example SWA-028: Requests the necessary text and explains how feedback
+- **Example ID:** SWA-028
+- **Category:** Draft Feedback
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "Can you tell me if my paragraph supports my thesis?"
+
+---
+
+### Example SWA-029: Promotes precise vocabulary rather than automatic synonym substitution
+- **Example ID:** SWA-029
+- **Category:** Draft Feedback
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "I use the word 'important' too many times. What can I do?"
+
+---
+
+### Example SWA-030: Provides a correction with a concise explanation
+- **Example ID:** SWA-030
+- **Category:** Draft Feedback
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "Does this sentence need a comma: 'After reviewing the data the team wrote a report'?"
+
+---
+
+### Example SWA-031: Gives revision criteria while avoiding the misconception that
+- **Example ID:** SWA-031
+- **Category:** Draft Feedback
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "How can I tell whether my writing is too informal?"
+
+---
+
+## Organization
+
+### Example SWA-003: Shows a general example of what the outline
+- **Example ID:** SWA-003
+- **Category:** Organization
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "How do I organize my essay?"
+
+---
+
+### Example SWA-018: Provides a basic structure while noting that assignment
+- **Example ID:** SWA-018
+- **Category:** Organization
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "How should I structure a five-paragraph essay?"
+
+---
+
+### Example SWA-019: Offers a revision strategy focused on logical flow
+- **Example ID:** SWA-019
+- **Category:** Organization
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "My paragraphs seem out of order. How can I fix them?"
+
+---
+
+### Example SWA-020: Gives a common convention without presenting it as
+- **Example ID:** SWA-020
+- **Category:** Organization
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "Where should my thesis statement go?"
+
+---
+
+### Example SWA-021: Turns unstructured notes into a practical outline process
+- **Example ID:** SWA-021
+- **Category:** Organization
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "I have lots of notes but don't know how to turn them into an outline."
+
+---
+
+### Example SWA-022: Helps the student make the conclusion more meaningful
+- **Example ID:** SWA-022
+- **Category:** Organization
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "My conclusion just repeats my introduction. What can I do?"
+
+---
+
+### Example SWA-023: Provides a concrete approach to improving coherence
+- **Example ID:** SWA-023
+- **Category:** Organization
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "How do I make my essay flow better?"
+
+---
+
+## Research and Sources
+
+### Example SWA-051: Demonstrates how to create and refine search terms
+- **Example ID:** SWA-051
+- **Category:** Research and Sources
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "What keywords should I use to research food insecurity on campus?"
+
+---
+
+### Example SWA-052: Provides verification steps and cautions against assumptions
+- **Example ID:** SWA-052
+- **Category:** Research and Sources
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "How do I know if an article is peer-reviewed?"
+
+---
+
+### Example SWA-053: Encourages source tracing and contextual use of statistics
+- **Example ID:** SWA-053
+- **Category:** Research and Sources
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "I found a statistic online. Can I use it in my essay?"
+
+---
+
+### Example SWA-054: Explains the distinction with examples
+- **Example ID:** SWA-054
+- **Category:** Research and Sources
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "What is the difference between a primary and secondary source?"
+
+---
+
+### Example SWA-055: Promotes critical evaluation rather than simplistic labels
+- **Example ID:** SWA-055
+- **Category:** Research and Sources
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "How can I avoid using sources that are biased?"
+
+---
+
+## Revision and Editing
+
+### Example SWA-056: Separates higher-level revision from proofreading
+- **Example ID:** SWA-056
+- **Category:** Revision and Editing
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "When should I start proofreading my essay?"
+
+---
+
+### Example SWA-057: Provides a staged editing process to prevent getting
+- **Example ID:** SWA-057
+- **Category:** Revision and Editing
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "I keep changing one sentence and never finish. What should I do?"
+
+---
+
+### Example SWA-058: Gives a practical test for paragraph relevance
+- **Example ID:** SWA-058
+- **Category:** Revision and Editing
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "How do I check whether every paragraph has a purpose?"
+
+---
+
+### Example SWA-059: Offers specific editing assistance while preserving student choice
+- **Example ID:** SWA-059
+- **Category:** Revision and Editing
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "Can you help me make my writing more concise?"
+
+---
+
+### Example SWA-060: Offers a focused revision strategy
+- **Example ID:** SWA-060
+- **Category:** Revision and Editing
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "My introduction is too long. How can I shorten it?"
+
+---
+
+### Example SWA-061: Gives the student a method to identify repetition
+- **Example ID:** SWA-061
+- **Category:** Revision and Editing
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "How do I check for repeated ideas?"
+
+---
+
+## Thesis Development
+
+### Example SWA-062: Explains how to make a thesis more specific
+- **Example ID:** SWA-062
+- **Category:** Thesis Development
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "Is 'School uniforms are good' a strong thesis?"
+
+---
+
+### Example SWA-063: Distinguishes a factual statement from an arguable claim
+- **Example ID:** SWA-063
+- **Category:** Thesis Development
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "My thesis is just a fact. How can I make it arguable?"
+
+---
+
+### Example SWA-064: Normalizes thesis refinement during the writing process
+- **Example ID:** SWA-064
+- **Category:** Thesis Development
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "Does my thesis have to stay the same while I write?"
+
+---
+
+### Example SWA-065: Provides a practical alignment check
+- **Example ID:** SWA-065
+- **Category:** Thesis Development
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "How do I make sure my body paragraphs connect to my thesis?"
+
+---
+
+## Writing Anxiety and Planning
+
+### Example SWA-070: Offers a manageable sequence without promising a shortcut
+- **Example ID:** SWA-070
+- **Category:** Writing Anxiety and Planning
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "My essay is due tomorrow and I haven't started. Where do I begin?"
+
+---
+
+### Example SWA-071: Normalizes drafting and reduces perfectionism
+- **Example ID:** SWA-071
+- **Category:** Writing Anxiety and Planning
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "I'm worried my writing isn't good enough to start drafting."
+
+---
+
+### Example SWA-072: Provides a staged plan that can be adapted
+- **Example ID:** SWA-072
+- **Category:** Writing Anxiety and Planning
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "How do I plan a research paper over two weeks?"
+
+---
+
+### Example SWA-073: Provides a relevance filter for selecting content
+- **Example ID:** SWA-073
+- **Category:** Writing Anxiety and Planning
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "I have too many ideas and can't decide what to include."
+
+---
+
+### Example SWA-074: Models a respectful clarification request without pretending to
+- **Example ID:** SWA-074
+- **Category:** Writing Anxiety and Planning
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "I don't know how to ask my professor for clarification about the essay."
+
+---
+
+## Writing Instructions
+
+### Example SWA-005: Shows general examples of transitions
+- **Example ID:** SWA-005
+- **Category:** Writing Instructions
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "How do I transition to a new topic in my essay?"
+
+---
+
+### Example SWA-032: Offers phrase patterns and reminds the student to
+- **Example ID:** SWA-032
+- **Category:** Writing Instructions
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "What phrases can I use to introduce a point from a source?"
+
+---
+
+### Example SWA-033: Provides academic phrase patterns for contrast and encourages
+- **Example ID:** SWA-033
+- **Category:** Writing Instructions
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "How can I show that two researchers disagree?"
+
+---
+
+### Example SWA-034: Teaches the claim-evidence-explanation sequence
+- **Example ID:** SWA-034
+- **Category:** Writing Instructions
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "How do I introduce evidence in a paragraph?"
+
+---
+
+### Example SWA-035: Provides cautious academic phrasing without encouraging invented limitations
+- **Example ID:** SWA-035
+- **Category:** Writing Instructions
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "What can I write when I want to acknowledge a limitation?"
+
+---
+
+### Example SWA-036: Offers useful transition phrases and explains their purpose
+- **Example ID:** SWA-036
+- **Category:** Writing Instructions
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "How can I introduce an example in my essay?"
+
+---
+
+### Example SWA-037: Provides language for causal reasoning and highlights the
+- **Example ID:** SWA-037
+- **Category:** Writing Instructions
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "I need to explain cause and effect. What phrases might help?"
+
+---
+
+### Example SWA-038: Models respectful counterargument structure
+- **Example ID:** SWA-038
+- **Category:** Writing Instructions
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "How do I start a paragraph that gives a counterargument?"
+
+---
+
+### Example SWA-039: Provides conclusion phrases while discouraging overstatement
+- **Example ID:** SWA-039
+- **Category:** Writing Instructions
+- **Provenance:** Synthetic pedagogical prompt reference (see matching ID in `02_writing_coach_reference_guide.txt` for response model and source notes)
+- **Student Prompt:** "What are some ways to signal that I'm drawing a conclusion?"
+
+---
