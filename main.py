@@ -128,7 +128,7 @@ class GatewayConfig(CompletionConfigBase):
     """Any OpenAI-compatible gateway (Gemini, OpenRouter, Groq, ...)."""
 
     type: Literal["writing_companion_gateway"] = "writing_companion_gateway"
-    model: str = "gemini-2.0-flash"
+    model: str = "gemini-3.8-flash"
     base_url: str = "https://generativelanguage.googleapis.com/v1beta/openai"
     api_key_env_var: str = "GEMINI_API_KEY"
 
@@ -157,7 +157,7 @@ def _completion():
         )
     if provider == "gateway":
         return GatewayConfig(
-            model=os.environ.get("WRITING_COMPANION_GATEWAY_MODEL", "gemini-2.0-flash"),
+            model=os.environ.get("WRITING_COMPANION_GATEWAY_MODEL", "gemini-3.8-flash"),
             base_url=os.environ.get(
                 "WRITING_COMPANION_GATEWAY_BASE_URL",
                 "https://generativelanguage.googleapis.com/v1beta/openai",

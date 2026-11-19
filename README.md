@@ -56,7 +56,9 @@ WRITING_COMPANION_SANDBOX=bashkit WRITING_COMPANION_PROVIDER=gateway \
   uv run agents chat
 ```
 
-- `WRITING_COMPANION_GATEWAY_MODEL` — model name (default `gemini-2.0-flash`)
+- `WRITING_COMPANION_GATEWAY_MODEL` — model name (default `gemini-3.8-flash`;
+  Google retires model names periodically — if the API answers 404 with a
+  suggested replacement, set this variable to the suggested name)
 - `WRITING_COMPANION_GATEWAY_BASE_URL` — OpenAI-compatible endpoint
   (default is Gemini's: `https://generativelanguage.googleapis.com/v1beta/openai`;
   for OpenRouter use `https://openrouter.ai/api/v1`, for Groq

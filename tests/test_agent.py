@@ -130,7 +130,7 @@ def test_gateway_provider_reads_named_env_var(
 
     monkeypatch.setenv("WRITING_COMPANION_PROVIDER", "gateway")
     monkeypatch.setenv("GEMINI_API_KEY", "dummy-key-for-construction-only")
-    monkeypatch.setenv("WRITING_COMPANION_GATEWAY_MODEL", "gemini-2.0-flash")
+    monkeypatch.setenv("WRITING_COMPANION_GATEWAY_MODEL", "gemini-3.8-flash")
     config = main._completion()
-    assert config.model == "gemini-2.0-flash"
-    assert _build_with(main, config, config.model).model == "gemini-2.0-flash"
+    assert config.model == "gemini-3.8-flash"
+    assert _build_with(main, config, config.model).model == "gemini-3.8-flash"
