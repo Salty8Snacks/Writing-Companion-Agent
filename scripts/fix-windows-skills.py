@@ -8,18 +8,13 @@ drive-absolute path, which validates on every OS. Re-run after `uv sync` until
 the SDK ships the fix, then delete the script.
 """
 
-import mistralai
+import inspect
+
+from mistralai.vibe.harness.runtime.capabilities import skills as skills_module
 
 from pathlib import Path
 
-SKILLS_FILE = (
-    Path(mistralai.__file__).parent
-    / "vibe"
-    / "harness"
-    / "runtime"
-    / "capabilities"
-    / "skills.py"
-)
+SKILLS_FILE = Path(inspect.getfile(skills_module))
 PATCH = (
     'path=f"/{_SKILL_ENTRY_FILE}"',
     'path="C:/" + _SKILL_ENTRY_FILE',
