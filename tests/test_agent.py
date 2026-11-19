@@ -93,3 +93,41 @@ async def test_session_opens_with_bundled_skill(
         assert isinstance(state, agents.Completed), state
     finally:
         await session.cancel()
+
+
+def _reload_main(monkeypatch: pytest.MonkeyPatch, **env: str):
+    import importlib
+
+    import main
+
+    for key, value in env.items():
+        monkeypatch.setenv(key, value)
+    return importlib.reload(main)
+
+
+def test_default_provider_is_mistral(monkeypatch: pytest.MonkeyPatch) -> None:
+    mod = _reload_main(
+        monkeypatch,
+        WRITING_COMPANION_SANDBOX="bashkit",
+        WRITING_COMPANION_MODEL="mistral-large-4",
+    )
+    assert mod.agent.model == "mistral-large-4"
+
+
+def test_ollama_provider_needs_no_key(monkeypatch: pytest.MonkeyPatch) -> None:
+    mod = _reload_main(
+        monkeypatch,
+        WRITING_COMPANION_SANDBOX="bashkit",
+        WRITING_COMPANION_PROVIDER="ollama",
+    )
+    assert mod.agent.model == "mistral-small3.2"
+
+    modified = agents.Agent(
+        model=mod.agent.model,
+        name="writing-companion-test",
+        completion=mod._completion(),
+        environment=agents.BashkitSandbox(),
+        skills=[agents.LocalSkillBundle.from_directory(SKILL_DIR)],
+        instructions=INSTRUCTIONS,
+    )
+    assert modified.model == "mistral-small3.2"

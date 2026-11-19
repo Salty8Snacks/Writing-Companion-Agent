@@ -26,6 +26,24 @@ WRITING_COMPANION_SANDBOX=bashkit uv run --env-file .env agents chat
 
 `bashkit` runs in-process: shell and file tools, no Python — enough for reading the skill files.
 
+## Running without a Mistral API key
+
+Set `WRITING_COMPANION_PROVIDER=ollama` to route the model calls through a local
+[Ollama](https://ollama.com) server with open-weight models — no Mistral key, no API cost,
+and draft text never leaves the machine:
+
+```bash
+ollama pull mistral-small3.2                      # or any tool-capable model
+WRITING_COMPANION_SANDBOX=bashkit WRITING_COMPANION_PROVIDER=ollama uv run agents chat
+```
+
+- `WRITING_COMPANION_OLLAMA_MODEL` — model name (default `mistral-small3.2`)
+- `WRITING_COMPANION_OLLAMA_BASE_URL` — server address (default `http://localhost:11434`)
+
+The default is Mistral (`mistral-large-4` via `WRITING_COMPANION_MODEL`). A local model is
+slower and weaker than the API models, so expect less polished coaching and test the
+live-run checklist against whichever backend you ship.
+
 ## Run locally
 
 ```bash

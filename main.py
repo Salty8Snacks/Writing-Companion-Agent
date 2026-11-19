@@ -8,6 +8,9 @@ import os
 from pathlib import Path
 
 from mistralai import agents
+from mistralai.vibe.harness.runtime.completion.providers.ollama import (
+    OllamaCompletionConfig,
+)
 
 SKILLS = Path(__file__).with_name("skills")
 
@@ -110,9 +113,24 @@ def _environment():
     return agents.MistralSandbox()
 
 
-agent = agents.Agent(
-    model=os.environ.get("WRITING_COMPANION_MODEL", "mistral-large-4"),
-    name="writing-companion",
+MODEL = os.environ.get("WRITING_COMPANION_MODEL", "mistral-large-4")
+
+
+def _completion():
+    """Model routing: Mistral by default; a local Ollama server with
+    WRITING_COMPANION_PROVIDER=ollama, so no Mistral API key is needed.
+    WRITING_COMPANION_OLLAMA_BASE_URL overrides the server address."""
+    if os.environ.get("WRITING_COMPANION_PROVIDER", "mistral") == "ollama":
+        return OllamaCompletionConfig(
+            model=os.environ.get("WRITING_COMPANION_OLLAMA_MODEL", "mistral-small3.2"),
+            base_url=os.environ.get(
+                "WRITING_COMPANION_OLLAMA_BASE_URL", "http://localhost:11434"
+            ),
+        )
+    return None
+
+
+AGENT_KWARGS = dict(
     environment=_environment(),
     skills=[
         agents.LocalSkillBundle.from_directory(
@@ -120,4 +138,15 @@ agent = agents.Agent(
         ),
     ],
     instructions=INSTRUCTIONS,
+)
+
+_completion_config = _completion()
+if _completion_config is not None:
+    MODEL = _completion_config.model
+    AGENT_KWARGS["completion"] = _completion_config
+
+agent = agents.Agent(
+    model=MODEL,
+    name="writing-companion",
+    **AGENT_KWARGS,
 )
